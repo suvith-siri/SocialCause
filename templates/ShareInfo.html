@@ -1,0 +1,65 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <h3>Share Information</h3>
+<div>
+  <form action="" method="POST">
+
+    {% csrf_token %}
+
+    <label for="name">Name</label>
+    <input type="text"  name="name" placeholder="Name...">
+
+    <label for="don">What to Donate(Food,clothes...)</label>
+    <input type="text"  name="don" placeholder="Donate...">
+
+    <label for="phn">Phone Number</label>
+    <input type="text"  name="phn" placeholder="Phone Number...">
+
+    <label for="loc">Location</label>
+    <input type="text"  name="loc" placeholder="Address...">
+    <input type="submit" value = "submit">
+    
+  </form>
+
+<p>Please click to Know location.</p>
+
+<button onclick="getLocation()">Click</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+
+<!-- <p>Upload an Image</p>
+
+<form>
+  <input type="file" id="myFile" name="fname">
+  <input type="submit" value = "submit">
+</form> -->
+
+</body>
+
+</body>
+</html>
+

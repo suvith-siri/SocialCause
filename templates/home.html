@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Share Web</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <style>
+    img
+    {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    h2{
+        text-align: center;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" >Share</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="{% url 'ShareInfo' %}">Share Info</a></li>
+      <li><a href="{% url 'login' %}">Login</a></li>
+      <!-- <li><a href="#">Sign up</a></li> -->
+    </ul>
+  </div>
+</nav>
+<img src="{% static 'f1.jpg' %}">  
+<h2>In 2020, between 720 and 811 million people faced hunger</h2> 
+<p>The number of people in the world affected by hunger increased in 2020 under the shadow of the COVID-19 pandemic. After remaining virtually unchanged from 2014 to 2019, the prevalence of undernourishment (PoU) climbed to around 9.9 percent in 2020, from 8.4 percent a year earlier.
+
+    In terms of population, taking into consideration the additional statistical uncertainty, it is estimated that between 720 and 811 million people in the world faced hunger in 2020. Considering the middle of the projected range (768 million), 118 million more people were facing hunger in 2020 than in 2019 – or as many as 161 million, considering the upper bound of the range.</p>
+
+</body>
+
